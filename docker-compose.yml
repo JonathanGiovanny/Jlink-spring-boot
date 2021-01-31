@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+    localdb:
+        image: mysql:8.0
+        container_name: mysql_jlink_test
+        ports:
+         - '3315:3306'
+        volumes:
+         - ./var/mysql:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: data_db
+            MYSQL_USER: sa
+            MYSQL_PASSWORD: sa
+        networks:
+         - hcrud
+
+networks:
+    hcrud:
+      driver: bridge

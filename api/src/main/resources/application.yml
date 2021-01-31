@@ -1,0 +1,8 @@
+spring:
+    jpa:
+        open-in-view: false
+    datasource:
+        url: jdbc:mysql://localhost:3315/data_db
+        username: sa
+        password: sa
+        driverClassName: com.mysql.cj.jdbc.Driver
